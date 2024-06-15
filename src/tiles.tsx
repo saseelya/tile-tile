@@ -11,10 +11,12 @@ interface TilesProps {
 }
 
 const TilesStyle = styled.span`
-  width: 325px;
-  height: 325px;
+  width: 250px;
+  height: 250px;
   display: block;
-  margin-left: 45px;
+  position: absolute;
+  right: 75px;
+  top: 100px;
 `
 
 const hoverOffAll = (tiles: TileType[]): TileType[] => {

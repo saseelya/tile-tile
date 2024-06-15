@@ -14,6 +14,7 @@ export const Main = () => {
       },
       () => {
         setCounter(counter + 1);
+        chrome.action.setBadgeText({ text: (counter + 1).toString() });
       }
     )
   }

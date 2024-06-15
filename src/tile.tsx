@@ -9,10 +9,7 @@ interface TileProps {
     saveCallback: Function
 }
 
-const TileStyle = styled.button`
-    min-width: 25px;
-    min-height: 25px;
-    padding: 29px;
+const TileStyle = styled.span`
     background: white;
 `;
 
@@ -29,10 +26,15 @@ export const Tile: React.FC<TileProps> = ({tile, tiles, index, saveCallback}) =>
     }
 
   return (
-    <span>
+    <>
         {tile.isHovered ? 
-            <HoveredTileStyle className="hoveredTile"/> : 
-            <TileStyle onMouseEnter={() => handleHover()} className="tile" />}
-    </span>
+            // <HoveredTileStyle className="hoveredTile">
+            // {/* </HoveredTileStyle>  */}
+                <img src='/images/BlueSelectedTile.png' alt="selected"/>
+                : 
+            // <TileStyle onMouseMove={() => handleHover()} className="tile" >
+            // </TileStyle>}
+                <img onMouseMove={() => handleHover()} src='/images/UnselectedTile.png' alt="unselected" />}
+    </>
   );
 };
