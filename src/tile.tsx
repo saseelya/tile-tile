@@ -1,6 +1,5 @@
 import React from "react";
 import { TileType } from "./types/interfaces";
-import styled from "styled-components";
 
 interface TileProps {
     tile: TileType
@@ -8,14 +7,6 @@ interface TileProps {
     index: number
     saveCallback: Function
 }
-
-const TileStyle = styled.span`
-    background: white;
-`;
-
-const HoveredTileStyle = styled(TileStyle)`
-    background: lightblue;
-`;
   
 
 export const Tile: React.FC<TileProps> = ({tile, tiles, index, saveCallback}) => {
@@ -30,11 +21,11 @@ export const Tile: React.FC<TileProps> = ({tile, tiles, index, saveCallback}) =>
         {tile.isHovered ? 
             // <HoveredTileStyle className="hoveredTile">
             // {/* </HoveredTileStyle>  */}
-                <img src='/images/BlueSelectedTile.png' alt="selected"/>
+                <img src="./images/BlueSelectedTile.png" alt="selected"/>
                 : 
             // <TileStyle onMouseMove={() => handleHover()} className="tile" >
             // </TileStyle>}
-                <img onMouseMove={() => handleHover()} src='/images/UnselectedTile.png' alt="unselected" />}
+                <img onMouseMove={() => handleHover()} src="./images/UnselectedTile.png" alt="unselected" />}
     </>
   );
 };

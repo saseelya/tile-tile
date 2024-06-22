@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Tile } from "./tile";
 import { TileType } from "./types/interfaces";
 import styled from "styled-components";
@@ -65,6 +65,7 @@ export const Tiles: React.FC<TilesProps> = ({tiles, tileCallback, counterCallbac
 
   return (
     <TilesStyle>
+      <img src="images/TileBoardCorners.png" alt="corners" style={{position: "absolute", zIndex: -1, bottom: "-10px", right: "-10px" }}/>
       {tiles.map((tile, key) =>
         (
           <Tile tile={tile} tiles={tiles} key={key} index={key} saveCallback={saveTiles} />
