@@ -22,7 +22,9 @@ export const Main = () => {
   return (
     <>
         <Tiles tiles={tiles} tileCallback={setTiles} counterCallback={incrementCounter} />
-        <Counter tiles={tiles} counter={counter} counterCallback={setCounter} />
+        <>
+          <Counter tiles={tiles} counter={counter} counterCallback={setCounter} />
+        </>
     </>
   );
 };
