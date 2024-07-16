@@ -22,8 +22,10 @@ export const Counter: React.FC<CounterProps> = ({ tiles, counter, counterCallbac
     }, []);
 
     return (
-        <span>
-            Number of tile resets: {counter}
+        <span style={{position: 'fixed', width: '400px', top: '60px'}}>
+            <span style={{display: 'flex', justifyContent: 'center', fontSize: 'xx-large', fontFamily: 'fantasy', color: 'darkcyan'}}>
+                {counter}
+            </span>
         </span>
     );
 };
